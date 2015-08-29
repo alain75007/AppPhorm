@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ecolem_test.appphorm.AccountActivity">
+    <item android:id="@+id/action_account" android:title="@string/action_catalog"
+        android:orderInCategory="99" android:showAsAction="ifRoom"
+        tools:ignore="AppCompatResource" />
+
+    <item android:id="@+id/action_change_user_info" android:title="@string/action_change_user_info"
+        android:orderInCategory="99" android:showAsAction="ifRoom"
+        tools:ignore="AppCompatResource" />
+
+    <item android:id="@+id/action_logout" android:title="@string/action_logout"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+    <item android:id="@+id/action_quit" android:title="@string/action_quit"
+        android:orderInCategory="100" app:showAsAction="never" />
+</menu>

@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+    <item android:id="@+id/action_main" android:title="@string/action_main"
+        android:orderInCategory="100" app:showAsAction="collapseActionView" />
+    <item android:id="@+id/action_login" android:title="@string/action_login"
+        android:orderInCategory="100" app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_subscribe" android:title="@string/action_subscribe"
+        android:orderInCategory="100" app:showAsAction="collapseActionView" />
+    <item android:id="@+id/action_catalog" android:title="@string/action_catalog"
+        android:orderInCategory="100" app:showAsAction="collapseActionView" />
+</menu>

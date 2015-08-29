@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".MainActivity">
+
+    <FrameLayout
+        android:orientation="horizontal"
+        android:layout_width="125dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:id="@+id/mainLeft"
+        android:background="@color/grey">
+
+        <TextView android:text="@string/main_title" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/page_title"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="45dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textIsSelectable="false" />
+
+        <ImageView
+            android:layout_marginTop="100dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/app_logo"
+            android:contentDescription="@string/app_logo"
+            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="center_horizontal|top" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/mainLeft"
+        android:layout_toRightOf="@+id/mainLeft"
+        android:layout_toEndOf="@+id/mainLeft"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/act_main_login_btn"
+            android:id="@+id/login_button"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onClickLogin"
+            android:width="210dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/act_main_suscribe_btn"
+            android:id="@+id/suscribe_button"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onClickSubscribe"
+            android:width="210dp"
+            android:layout_below="@+id/login_button"
+            android:layout_alignLeft="@+id/login_button"
+            android:layout_alignStart="@+id/login_button"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/act_main_catalog_btn"
+            android:id="@+id/act_main_catalog_btn"
+            android:layout_gravity="center_horizontal"
+            android:width="210dp"
+            android:layout_below="@+id/suscribe_button"
+            android:layout_alignLeft="@+id/suscribe_button"
+            android:layout_alignStart="@+id/suscribe_button"
+            android:layout_marginTop="10dp"
+            android:onClick="onClickCatalog"
+            android:nestedScrollingEnabled="false" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:id="@+id/wallpaper"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/wallpaper"
+            android:background="@drawable/wall_space" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

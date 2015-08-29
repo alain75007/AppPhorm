@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".MainActivity">
+
+    <FrameLayout
+        android:orientation="horizontal"
+        android:layout_width="125dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:id="@+id/mainLeft"
+        android:background="@color/grey">
+
+        <TextView android:text="@string/subscribe_title" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/page_title"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="45dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textIsSelectable="false" />
+
+        <ImageView
+            android:layout_marginTop="100dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/app_logo"
+            android:contentDescription="@string/app_logo"
+            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="center_horizontal|top" />
+
+    </FrameLayout>
+
+    <GridLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/mainLeft"
+        android:layout_toRightOf="@+id/mainLeft"
+        android:layout_toEndOf="@+id/mainLeft"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <EditText
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/act_subscribe_name"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="@string/act_subscribe_form_name"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <EditText
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/act_subscribe_pname"
+            android:layout_below="@+id/act_subscribe_name"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="@string/act_subscribe_form_pname"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/act_subscribe_email"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:hint="@string/form_email"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/act_subscribe_birthday"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:hint="@string/act_subscribe_birthday"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/act_subscribe_password"
+            android:hint="@string/form_password"
+            android:layout_below="@+id/act_subscribe_email"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/act_subscribe_email"
+            android:layout_alignEnd="@+id/act_subscribe_email"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_marginTop="15dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:id="@+id/togglePasswordVisibility"
+            android:button="@drawable/checkbox_show_password_style"
+            android:background="@null"
+            android:onClick="toggleVisibility"
+            android:paddingRight="10dp"
+            android:paddingLeft="0dp"
+            android:layout_gravity="right"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:layout_marginTop="15dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/act_main_suscribe_btn"
+            android:id="@+id/act_subscribe_button"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onClickSubscribe"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/log"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/act_subscribe_button"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:layout_marginTop="15dp" />
+
+    </GridLayout>
+
+
+</RelativeLayout>
