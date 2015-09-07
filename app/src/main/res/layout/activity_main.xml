@@ -33,63 +33,75 @@
 
     </FrameLayout>
 
-    <RelativeLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/mainLeft"
+        android:layout_height="fill_parent"
         android:layout_toRightOf="@+id/mainLeft"
-        android:layout_toEndOf="@+id/mainLeft"
-        android:layout_marginTop="50dp">
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/act_main_login_btn"
-            android:id="@+id/login_button"
-            android:layout_gravity="center_horizontal"
-            android:onClick="onClickLogin"
-            android:width="210dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp" />
+        <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="50dp">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/act_main_suscribe_btn"
-            android:id="@+id/suscribe_button"
-            android:layout_gravity="center_horizontal"
-            android:onClick="onClickSubscribe"
-            android:width="210dp"
-            android:layout_below="@+id/login_button"
-            android:layout_alignLeft="@+id/login_button"
-            android:layout_alignStart="@+id/login_button"
-            android:layout_marginTop="10dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/act_main_login_btn"
+                android:id="@+id/login_button"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onClickLogin"
+                android:width="210dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/act_main_catalog_btn"
-            android:id="@+id/act_main_catalog_btn"
-            android:layout_gravity="center_horizontal"
-            android:width="210dp"
-            android:layout_below="@+id/suscribe_button"
-            android:layout_alignLeft="@+id/suscribe_button"
-            android:layout_alignStart="@+id/suscribe_button"
-            android:layout_marginTop="10dp"
-            android:onClick="onClickCatalog"
-            android:nestedScrollingEnabled="false" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/act_main_suscribe_btn"
+                android:id="@+id/suscribe_button"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClickSubscribe"
+                android:width="210dp"
+                android:layout_below="@+id/login_button"
+                android:layout_alignLeft="@+id/login_button"
+                android:layout_alignStart="@+id/login_button"
+                android:layout_marginTop="10dp" />
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="200dp"
-            android:id="@+id/wallpaper"
-            android:layout_alignParentBottom="true"
-            android:contentDescription="@string/wallpaper"
-            android:background="@drawable/wall_space" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/act_main_catalog_btn"
+                android:id="@+id/act_main_catalog_btn"
+                android:layout_centerHorizontal="true"
+                android:width="210dp"
+                android:layout_below="@+id/suscribe_button"
+                android:layout_alignLeft="@+id/suscribe_button"
+                android:layout_alignStart="@+id/suscribe_button"
+                android:layout_marginTop="10dp"
+                android:onClick="onClickCatalog"
+                android:nestedScrollingEnabled="false" />
 
-    </RelativeLayout>
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:id="@+id/wallpaper"
+                android:contentDescription="@string/wallpaper"
+                android:background="@drawable/wall_space"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/mainLeft"
+                android:layout_toEndOf="@+id/mainLeft"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true" />
 
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

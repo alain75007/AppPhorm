@@ -33,19 +33,24 @@
 
     </FrameLayout>
 
-    <GridLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@+id/mainLeft"
+        android:layout_toEndOf="@+id/mainLeft">
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_alignTop="@+id/mainLeft"
         android:layout_toRightOf="@+id/mainLeft"
         android:layout_toEndOf="@+id/mainLeft"
-        android:layout_marginTop="50dp"
+        android:paddingTop="30dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp">
 
         <EditText
-            android:layout_width="210dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/act_subscribe_name"
             android:layout_alignParentRight="true"
@@ -57,7 +62,7 @@
             android:layout_column="0" />
 
         <EditText
-            android:layout_width="210dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/act_subscribe_pname"
             android:layout_below="@+id/act_subscribe_name"
@@ -71,7 +76,7 @@
             android:layout_marginTop="15dp" />
 
         <EditText
-            android:layout_width="210dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
@@ -93,7 +98,7 @@
             android:layout_marginTop="15dp" />
 
         <EditText
-            android:layout_width="210dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:id="@+id/act_subscribe_password"
@@ -133,7 +138,7 @@
             android:layout_marginTop="15dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/log"
             android:layout_alignParentLeft="true"
@@ -147,5 +152,6 @@
 
     </GridLayout>
 
+    </ScrollView>
 
 </RelativeLayout>

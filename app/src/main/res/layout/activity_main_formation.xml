@@ -63,79 +63,84 @@
             android:onClick="changeUserInfo"/>
     </LinearLayout>
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:id="@+id/mainRight"
         android:layout_toRightOf="@+id/mainLeft"
         android:layout_toEndOf="@+id/mainLeft">
 
-        <TextView
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/act_main_formation_subtitle"
-            android:id="@+id/act_main_formation_subtitle"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp" />
+            android:layout_height="fill_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:id="@+id/mainRight">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/act_main_formation_subtitle"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/act_main_formation_finished"
-            android:layout_marginTop="15dp"
-            android:textColor="@color/green"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/act_main_formation_subtitle"
+                android:id="@+id/act_main_formation_subtitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/act_main_formation_time"
-            android:id="@+id/act_main_formation_duration"
-            android:layout_below="@+id/act_main_formation_finished"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_main_formation_subtitle"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/act_main_formation_finished"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/green"/>
 
-        <com.android.volley.toolbox.NetworkImageView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/act_main_formation_image"
-            android:layout_below="@+id/act_main_formation_duration"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginTop="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/act_main_formation_time"
+                android:id="@+id/act_main_formation_duration"
+                android:layout_below="@+id/act_main_formation_finished"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/act_main_formation_price"
-            android:id="@+id/act_main_formation_price"
-            android:layout_below="@+id/act_main_formation_image"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp" />
+            <com.android.volley.toolbox.NetworkImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/act_main_formation_image"
+                android:layout_below="@+id/act_main_formation_duration"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="20dp"/>
 
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/act_main_formation_desc_btn"
-            android:text="@string/act_main_formation_desc_btn"
-            android:layout_marginTop="30dp"
-            android:layout_below="@+id/act_main_formation_price"
-            android:layout_centerHorizontal="true"
-            android:nestedScrollingEnabled="false"
-            android:onClick="onClickDescriptif"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/act_main_formation_price"
+                android:id="@+id/act_main_formation_price"
+                android:layout_below="@+id/act_main_formation_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
 
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/act_main_formation_video_btn"
-            android:text="@string/act_main_formation_video_btn"
-            android:layout_below="@+id/act_main_formation_desc_btn"
-            android:layout_centerHorizontal="true"
-            android:onClick="onClickVideo"/>
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/act_main_formation_desc_btn"
+                android:text="@string/act_main_formation_desc_btn"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/act_main_formation_price"
+                android:layout_centerHorizontal="true"
+                android:nestedScrollingEnabled="false"
+                android:onClick="onClickDescriptif"/>
 
-    </RelativeLayout>
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/act_main_formation_video_btn"
+                android:text="@string/act_main_formation_video_btn"
+                android:layout_below="@+id/act_main_formation_desc_btn"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClickVideo"/>
+
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
